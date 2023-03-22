@@ -1,0 +1,35 @@
+<form [formGroup]="regForm" (ngSubmit)="processForm()">
+  <table>
+    <tr>
+      <td>Name:</td>
+      <td>
+        <input type="text" size="30" formControlName="name" />
+      </td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td>
+        <input type="email" size="30" formControlName="email" />
+      </td>
+    </tr>
+    <tr>
+      <td>Age:</td>
+      <td>
+        <input type="number" min="18" formControlName="age" />
+      </td>
+    </tr>
+    <tr>
+      <td>Attending:</td>
+      <td>
+        <select formControlName="attendance">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button type="submit">RSVP</button></td>
+    </tr>
+  </table>
+</form>
